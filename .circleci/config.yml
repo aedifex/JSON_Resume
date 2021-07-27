@@ -5,10 +5,17 @@ orbs:
   node: circleci/node@4.1
 
 workflows:
-  sample:
+  json-resume:
     jobs:
-      - node/test:
-          version: '15.1'
-          # This is the node version to use for the `cimg/node` tag
-          # Relevant tags can be found on the CircleCI Developer Hub
-          # https://circleci.com/developer/images/image/cimg/node
+      - build-resume
+
+jobs:
+  build-resume:
+    working_directory: ~/project
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run:
+          name: "Fetch json resume cli"
+          command: "npm install -g resume-cli"

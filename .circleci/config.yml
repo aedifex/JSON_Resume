@@ -18,4 +18,8 @@ jobs:
       - checkout
       - run:
           name: "Fetch json resume cli"
-          command: "sudo npm install -g resume-cli"
+          # https://github.com/jsonresume/resume-cli/issues/365
+          command: "sudo npm install -g resume-cli --unsafe-perm=true"
+      - run:
+          name: "Export JSON resume as PDF"
+          command: "resume export resume.html && ls"

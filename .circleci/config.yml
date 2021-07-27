@@ -18,4 +18,4 @@ jobs:
       - checkout
       - run:
           name: "Fetch json resume cli"
-          command: "npm install -g resume-cli"
+          command: "sudo npm install -g resume-cli"

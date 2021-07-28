@@ -25,5 +25,4 @@ jobs:
           command: "npx resume export resume.html"
       # persist resume.html as a build artifact
       - store_artifacts:
-          path: ~/project
-          destination: resume.html
+          path: ~/project/resume.html

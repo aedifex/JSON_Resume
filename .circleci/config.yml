@@ -22,4 +22,4 @@ jobs:
           command: "sudo npm install -g resume-cli --unsafe-perm=true"
       - run:
           name: "Export JSON resume as PDF"
-          command: "resume export resume.html && ls"
+          command: "npx resume export resume.html && ls"

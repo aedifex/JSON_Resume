@@ -22,4 +22,8 @@ jobs:
           command: "npm install resume-cli"
       - run:
           name: "Export JSON resume as PDF"
-          command: "npx resume export resume.pdf"
+          command: "npx resume export resume.html"
+      # persist resume.html as a build artifact
+      - store_artifacts:
+          path: /project/
+          destination: resume.html

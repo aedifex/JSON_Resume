@@ -34,6 +34,20 @@
     "highlights": [
       "Started the company"
     ]
+  },{
+    "name": "San Francisco Public Defender’s Office",
+    "position": "Intern Legal Assistant",
+    "url": "https://company.com",
+    "startDate": "2012-02-01",
+    "endDate": "2012-05-01",
+    "summary": "Description…",
+    "highlights": [
+      "Investigated cases, interviewed clients, conducted legal research, wrote motions, and participated in all phases of trial preparation.",
+      "Managed database with all case related information.",
+      "Maintained regular correspondence with clients and provided information & assistance as needed during trials.",
+      "Assisted attorney during court and participated in court proceedings",
+      "Interacted with a variety of personas involved with criminal justice system, from police, fellow attorneys, paralegals, investigators, to judges."
+    ]
   }],
   "volunteer": [{
     "organization": "Larkin Street Youth Services",
@@ -47,22 +61,52 @@
     ]
   }],
   "education": [{
-    "institution": "University",
+    "institution": "University of California, Berkeley Extension",
     "url": "https://institution.com/",
-    "area": "Software Development",
+    "area": "Software Engineering",
     "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "score": "4.0",
+    "startDate": "2018-08-01",
+    "endDate": "2021-06-01",
+    "score": "3.56",
     "courses": [
-      "DB1101 - Basic SQL"
+      "Certificate Program in Software Engineering",
+      "Expert Seminar Series on AI and Machine Learning"
+    ]
+  }, {
+    "institution": "University of California, Irvine",
+    "url": "https://institution.com/",
+    "area": "Classical Civilization",
+    "studyType": "Bachelor",
+    "startDate": "2012-08-01",
+    "endDate": "2014-12-01",
+    "score": "3.5",
+    "courses": [
+      "Certificate in Middle Eastern Studies",
+      "Certificate in Conflict Resolution"
+    ]
+  }, {
+    "institution": "City College of San Francisco",
+    "url": "https://institution.com/",
+    "area": "Political Science",
+    "studyType": "Transfer",
+    "startDate": "2008-01-01",
+    "endDate": "2012-08-01",
+    "score": "3.0",
+    "courses": [
+      "Certificate in Computing Skills for Scientists",
+      "Certificate in DevOps & Build Automation"
     ]
   }],
   "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
+    "title": "President's Club",
+    "date": "2014-12-01",
+    "awarder": "CircleCI",
+    "summary": "Made President's Club first year in client facing role"
+  },{
+    "title": "Dean's Honors List",
+    "date": "2014-12-01",
+    "awarder": "UC Irvine",
+    "summary": "Dean's Honors List - 5 semesters"
   }],
   "publications": [{
     "name": "Publication",

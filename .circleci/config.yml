@@ -19,7 +19,7 @@ jobs:
       - run:
           name: "Fetch json resume cli"
           # https://github.com/jsonresume/resume-cli/issues/365
-          command: "npm install resumed jsonresume-theme-even && resumed render resume.json --output resume_test.html"
+          command: "npm install resumed jsonresume-theme-even && npx resumed render resume.json --output resume_test.html"
       #- run:
       #    name: "Export JSON resume as PDF"
       #    command: "npx resume export resume.html --theme onepage"

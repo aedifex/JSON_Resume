@@ -35,4 +35,4 @@ jobs:
           command: npx resumed render resume.json --output $RESUME_TARGET
       - run:
           name: Upload resume to S3
-          command: aws s3 sync $RESUME_TARGET s3://www.christopherblackresume
+          command: aws s3 cp $RESUME_TARGET s3://www.christopherblackresume

@@ -2,7 +2,8 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.1
+  # node: circleci/node@4.1
+  aws-cli: circleci/aws-cli@3.1.1
 
 workflows:
   json-resume:
@@ -14,15 +15,24 @@ jobs:
     working_directory: ~/project
     docker:
       - image: circleci/node:10.16.3
+    environment:
+      RESUME_TARGET: index.html
     steps:
       - checkout
       - run:
+          name: "Fetch AWS CLI"
+          command: |
+            sudo apt-get update
+            sudo apt-get install awscli
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY
+            aws configure set aws_secret_access_key $AWS_SECRET_KEY
+      - run:
           name: "Fetch json resume cli"
           # https://github.com/jsonresume/resume-cli/issues/365
-          command: "npm install resumed jsonresume-theme-even && npx resumed render resume.json --output resume_test.html"
-      #- run:
-      #    name: "Export JSON resume as PDF"
-      #    command: "npx resume export resume.html --theme onepage"
-      # persist resume.html as a build artifact
-      #- store_artifacts:
-       #   path: ~/project/resume.html
+          command: "npm install resumed jsonresume-theme-even"
+      - run:
+          name: "Generate resume"
+          command: npx resumed render resume.json --output $RESUME_TARGET
+      - run:
+          name: Upload resume to S3
+          command: aws s3 sync $RESUME_TARGET s3://www.christopherblackresume

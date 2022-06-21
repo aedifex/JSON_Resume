@@ -29,7 +29,7 @@ jobs:
       - run:
           name: "Fetch json resume cli"
           # https://github.com/jsonresume/resume-cli/issues/365
-          command: "npm install resumed jsonresume-theme-even"
+          command: "npm install resumed orbit-original"
       - run:
           name: "Generate resume"
           command: npx resumed render resume.json --output $RESUME_TARGET

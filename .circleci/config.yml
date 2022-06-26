@@ -31,7 +31,7 @@ jobs:
           command: "npm install resumed jsonresume-theme-onepage"
       - run:
           name: Validate resume
-          command: npx resumed validate $RESUME_TARGET
+          command: npx resumed validate resume.json
       - run:
           name: "Generate resume"
           command: npx resumed render resume.json --output $RESUME_TARGET

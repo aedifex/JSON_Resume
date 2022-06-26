@@ -3,7 +3,7 @@
 Store your resume as a JSON file! Apply DevOps principles to maintaining an up-to-date resume, deploy to S3 in seconds. Get excited, tell your friends.
 
 --
-[![<ORG_NAME>](https://circleci.com/github/aedifex/JSON_Resume.svg?style=svg)](https://app.circleci.com/pipelines/gh/aedifex/JSON_Resume)
+[![aedifex](https://circleci.com/gh/aedifex/JSON_Resume.svg?style=svg)](https://app.circleci.com/pipelines/gh/aedifex/JSON_Resume)
 
 
 ### Longer description...

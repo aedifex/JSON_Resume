@@ -28,8 +28,10 @@ jobs:
             aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
       - run:
           name: "Fetch json resume cli"
-          # https://github.com/jsonresume/resume-cli/issues/365
           command: "npm install resumed jsonresume-theme-onepage"
+      - run:
+          name: Validate resume
+          command: npx resumed validate $RESUME_TARGET
       - run:
           name: "Generate resume"
           command: npx resumed render resume.json --output $RESUME_TARGET

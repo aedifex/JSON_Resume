@@ -13,8 +13,6 @@ workflows:
 jobs:
   build-resume:
     working_directory: ~/project
-    #docker:
-    #  - image: circleci/node:10.16.3
     machine: true
     environment:
       RESUME_TARGET: index.html
@@ -35,7 +33,7 @@ jobs:
           command: npx resumed validate resume.json
       - run:
           name: "Generate resume"
-          command: npx resumed render resume.json --output $RESUME_TARGET --theme spartacus
+          command: npx resumed render resume.json --output $RESUME_TARGET --theme --theme ./node_modules/jsonresume-theme-spartacus
       - run:
           name: Upload resume to S3
           command: aws s3 cp $RESUME_TARGET s3://www.christopherblackresume

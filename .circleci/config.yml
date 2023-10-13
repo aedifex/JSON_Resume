@@ -36,7 +36,7 @@ jobs:
           command: npx resumed validate resume.json
       - run:
           name: "Generate resume"
-          command: npx resumed render resume.json --output $RESUME_TARGET --theme ./node_modules/jsonresume-theme-spartacus
+          command: npx resumed render resume.json --output $RESUME_TARGET --theme spartacus
       - run:
           name: Upload resume to S3
           command: aws s3 cp $RESUME_TARGET s3://www.christopherblackresume

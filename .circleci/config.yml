@@ -29,7 +29,8 @@ jobs:
           name: "Fetch json resume cli"
           command: "npm install -g resumed"
       - run:
-          name: "npm install -g jsonresume-theme-spartacus"
+          name: "Install resume theme"
+          command: "npm install -g jsonresume-theme-spartacus"
       - run:
           name: Validate resume
           command: npx resumed validate resume.json

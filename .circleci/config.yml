@@ -27,7 +27,9 @@ jobs:
             aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
       - run:
           name: "Fetch json resume cli"
-          command: "npm install -g resumed jsonresume-theme-spartacus"
+          command: "npm install -g resumed"
+      - run:
+          name: "npm install -g jsonresume-theme-spartacus"
       - run:
           name: Validate resume
           command: npx resumed validate resume.json

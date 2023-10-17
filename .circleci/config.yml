@@ -27,16 +27,19 @@ jobs:
             aws configure set aws_secret_access_key $aws_secret_access_key
       - run:
           name: "Fetch json resume cli"
-          command: "npm install -g resumed"
+          command: "npm install resume-cli"
       - run:
           name: "Install resume theme"
-          command: "npm install -g jsonresume-theme-spartacus"
+          command: "npm install -g jsonresume-theme-joeytall"
+      #- run:
+       #   name: "Validate resume"
+       #   command: "npx resumed validate resume.json"
       - run:
-          name: "Validate resume"
-          command: "npx resumed validate resume.json"
-      - run:
-          name: "Generate resume"
-          command: "npx resumed render resume.json --output $RESUME_TARGET"
+          name: "Build resume"
+          command: "resume export --format html --theme joeytall ."
+     # - run:
+     #     name: "Generate resume"
+     #     command: "npx resumed render resume.json --output $RESUME_TARGET"
       - run:
           name: "Upload resume to S3"
           command: "aws s3 cp $RESUME_TARGET s3://christopherblackresume"

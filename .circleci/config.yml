@@ -23,8 +23,8 @@ jobs:
           command: |
             sudo apt-get update
             sudo apt-get install awscli
-            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-            aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+            aws configure set aws_access_key_id $aws_access_key_id
+            aws configure set aws_secret_access_key $aws_secret_access_key
       - run:
           name: "Fetch json resume cli"
           command: "npm install -g resumed"
@@ -32,11 +32,11 @@ jobs:
           name: "Install resume theme"
           command: "npm install -g jsonresume-theme-spartacus"
       - run:
-          name: Validate resume
-          command: npx resumed validate resume.json
+          name: "Validate resume"
+          command: "npx resumed validate resume.json"
       - run:
           name: "Generate resume"
-          command: npx resumed render resume.json --output $RESUME_TARGET --theme spartacus
+          command: "npx resumed render resume.json --output $RESUME_TARGET --theme spartacus"
       - run:
-          name: Upload resume to S3
-          command: aws s3 cp $RESUME_TARGET s3://www.christopherblackresume
+          name: "Upload resume to S3"
+          command: "aws s3 cp $RESUME_TARGET s3://christopherblackresume"

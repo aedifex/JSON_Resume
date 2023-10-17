@@ -29,8 +29,9 @@ jobs:
           name: "Fetch json resume cli"
           command: "npm install -g resume-cli"
       - run:
+        # Install cli globally - theme locally
           name: "Install resume theme"
-          command: "npm install -g jsonresume-theme-joeytall"
+          command: "npm install jsonresume-theme-joeytall"
       #- run:
        #   name: "Validate resume"
        #   command: "npx resumed validate resume.json"

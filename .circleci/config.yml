@@ -36,7 +36,7 @@ jobs:
        #   command: "npx resumed validate resume.json"
       - run:
           name: "Build resume"
-          command: "resume export --format html --theme joeytall"
+          command: "resume export --format html --theme joeytall ~/project"
      # - run:
      #     name: "Generate resume"
      #     command: "npx resumed render resume.json --output $RESUME_TARGET"

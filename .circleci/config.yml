@@ -18,11 +18,11 @@ jobs:
       RESUME_TARGET: index.html
     steps:
       - checkout
+      # Leverage Orb to install AWS CLI
+      - aws-cli/setup
       - run:
-          name: "Fetch AWS CLI"
+          name: "Configure AWS CLI"
           command: |
-            sudo apt-get update
-            sudo apt-get install awscli
             aws configure set aws_access_key_id $aws_access_key_id
             aws configure set aws_secret_access_key $aws_secret_access_key
       # Install CLI globally

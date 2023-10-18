@@ -20,11 +20,6 @@ jobs:
       - checkout
       # Leverage Orb to install AWS CLI
       - aws-cli/setup
-      - run:
-          name: "Configure AWS CLI"
-          command: |
-            aws configure set aws_access_key_id $aws_access_key_id
-            aws configure set aws_secret_access_key $aws_secret_access_key
       # Install CLI globally
       - run:
           name: "Fetch json resume cli"

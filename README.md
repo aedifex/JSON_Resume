@@ -6,6 +6,7 @@ Store your resume as a JSON file! Apply DevOps principles to maintaining an up-t
 
 [![aedifex](https://circleci.com/gh/aedifex/JSON_Resume.svg?style=svg)](https://app.circleci.com/pipelines/gh/aedifex/JSON_Resume)
 
+![Basic architecture](json_resume.png)
 
 ### Longer description...
 

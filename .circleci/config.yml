@@ -25,22 +25,17 @@ jobs:
             sudo apt-get install awscli
             aws configure set aws_access_key_id $aws_access_key_id
             aws configure set aws_secret_access_key $aws_secret_access_key
+      # Install CLI globally
       - run:
           name: "Fetch json resume cli"
           command: "npm install -g resume-cli"
+      # And install theme in project directory
       - run:
-        # Install cli globally - theme locally
           name: "Install resume theme"
           command: "npm install jsonresume-theme-joeytall"
-      #- run:
-       #   name: "Validate resume"
-       #   command: "npx resumed validate resume.json"
       - run:
           name: "Build resume"
           command: "resume export --format html --theme joeytall ."
-     # - run:
-     #     name: "Generate resume"
-     #     command: "npx resumed render resume.json --output $RESUME_TARGET"
       - run:
           name: "Rename file"
           command: "mv ..html $RESUME_TARGET"

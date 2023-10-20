@@ -3,3 +3,4 @@ package-lock.json
 misc.txt
 resume_schema_example.json
 node_modules
+.DS_Store

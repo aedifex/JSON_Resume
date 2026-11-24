@@ -21,7 +21,7 @@
     }, {
       "network": "LinkedIn",
       "username": "cblack1",
-      "url": "a url"
+      "url": "https://www.linkedin.com/in/cblack1"
     }]
   },
   "work": [{
@@ -37,7 +37,6 @@
   },{
     "name": "San Francisco Public Defender’s Office",
     "position": "Intern Legal Assistant",
-    "url": "SFPD Office",
     "startDate": "2012-02-01",
     "endDate": "2012-05-01",
     "summary": "Description…",
@@ -51,7 +50,7 @@
   },{
     "name": "CircleCI",
     "position": "Solutions Architect",
-    "url": "SFPD Office",
+    "url": "https://circleci.com",
     "startDate": "2012-02-01",
     "endDate": "2012-05-01",
     "summary": "Description…",

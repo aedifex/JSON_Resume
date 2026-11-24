@@ -14,6 +14,10 @@ Tired of getting your resume up to date? Every wondered how you could apply prog
 
 This project leverages several technologies to create a CI/CD process which builds, updates, and pushes your resume to an S3 bucket for static hosting. Now, rather than sending a PDF to a prospective employer, you can impress them by sending them a URL! Exciting, I know.
 
+### How it works
+
+![Résumé as code: edit resume.json, push to GitHub, CircleCI validates, renders and prints, deploy to S3 + CloudFront](resume_as_code.png)
+
 There are several components to this project.
 
 1. JSON resume, an open schema representing your resume / CV as a JSON object.
